@@ -1,47 +1,7 @@
-# Basic Site Settings
-title: "Antonio Santoro"
-description: "Portfolio personale: elettronica, stampa 3D e progetti interdisciplinari"
-url: "https://antonio-santoro.github.io" # il tuo sito
-baseurl: "" # lascia vuoto
-locale: "en-US"
-repository: "antonio-santoro.github.io"
-
-# Theme
-theme: jekyll-theme-cayman
-
-# Author info
-author:
-  name: "Antonio Santoro"
-  avatar: "profile.png" # opzionale, se vuoi la tua foto
-  email: "antos3104@gmail.com"
-  location: "Messina, Italia"
-  bio: "Studente di Ingegneria Elettronica e appassionato di stampa 3D, modellazione e progetti interdisciplinari."
-  github: "Antonio-Santoro"
-
-# Plugins
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-sitemap
-
-# Collections
-collections:
-  portfolio:
-    output: true
-    permalink: /portfolio/:title/
-
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-
-# Markdown
-markdown: kramdown
+title: Antonio Santoro
+email: antonio@email.com
+description: >- # questa è una descrizione breve
+  Portfolio personale di Antonio Santoro: progetti di elettronica, stampa 3D e modellazione.
+baseurl: "" # serve se il sito non è in una sottocartella
+url: "https://antonio-santoro.github.io"
+theme: architect
