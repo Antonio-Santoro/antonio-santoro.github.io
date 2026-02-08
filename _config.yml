@@ -4,4 +4,4 @@ description: >- # questa è una descrizione breve
   Portfolio personale di Antonio Santoro: progetti di elettronica, stampa 3D e modellazione.
 baseurl: "" # serve se il sito non è in una sottocartella
 url: "https://antonio-santoro.github.io/"
-theme: jekyll-theme-slate
+theme: jekyll-theme-architect
