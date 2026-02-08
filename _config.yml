@@ -1,5 +1,7 @@
-title: Architect theme
-description: Architect is a theme for GitHub Pages.
-show_downloads: true
-google_analytics:
-theme: jekyll-theme-architect
+title: Antonio Santoro
+email: antos3104@email.com
+description: >- # questa è una descrizione breve
+  Portfolio personale di Antonio Santoro: progetti di elettronica, stampa 3D e modellazione.
+baseurl: "" # serve se il sito non è in una sottocartella
+url: "https://antonio-santoro.github.io/"
+theme: minima
