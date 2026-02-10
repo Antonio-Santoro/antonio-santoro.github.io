@@ -82,3 +82,40 @@ footer {
   margin: 80px 0 20px;
   font-size: 0.9em;
 }
+/* LIGHT MODE */
+body.light {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+
+body.light header {
+  background-color: #f8fafc;
+}
+
+body.light nav {
+  background-color: #e2e8f0;
+}
+
+body.light nav a {
+  color: #0f172a;
+}
+
+body.light nav a:hover {
+  background-color: #cbd5f5;
+}
+
+body.light .card {
+  background-color: #e2e8f0;
+}
+
+body.light h2 {
+  color: #2563eb;
+}
+
+/* TOGGLE BUTTON */
+.toggle {
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 15px;
+}
+
