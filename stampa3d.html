@@ -2,11 +2,135 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stampa 3D | Antonio Santoro</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      background-color: #0f172a;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #38bdf8;
+      font-size: 1.4rem;
+    }
+
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      right: -260px;
+      width: 260px;
+      height: 100%;
+      background-color: #1e293b;
+      padding-top: 80px;
+      transition: right 0.3s ease;
+      z-index: 100;
+    }
+
+    nav.open {
+      right: 0;
+    }
+
+    nav a {
+      display: block;
+      padding: 15px 25px;
+      color: #e5e7eb;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      background-color: #334155;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      color: #7dd3fc;
+    }
+
+    .card {
+      background-color: #1e293b;
+      padding: 20px 24px;
+      border-radius: 14px;
+      margin-top: 20px;
+    }
+
+    footer {
+      text-align: center;
+      opacity: 0.6;
+      margin: 80px 0 20px;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Stampa 3D</h1>
-  <p>Progetti di modellazione e stampa 3D.</p>
-  <a href="index.html">← Torna alla Home</a>
+
+<header>
+  <h1>Antonio Santoro</h1>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav id="menu">
+  <a href="index.html">Home</a>
+  <a href="elettronica.html">Elettronica</a>
+  <a href="stampa3d.html">Stampa 3D</a>
+  <a href="bioinformatica.html">Bioinformatica</a>
+</nav>
+
+<div class="container">
+  <h2>🖨️ Stampa 3D</h2>
+
+  <div class="card">
+    <p>
+      Progetti elettronici sviluppati durante il percorso universitario
+      e come interesse personale.
+    </p>
+    <p>
+      Attività principali:
+      <ul>
+        <li>Circuiti elettronici</li>
+        <li>Analisi di sistemi</li>
+        <li>Progetti PCB</li>
+      </ul>
+    </p>
+  </div>
+</div>
+
+<footer>
+  © 2026 · Antonio Santoro
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("open");
+  }
+</script>
+
 </body>
 </html>
