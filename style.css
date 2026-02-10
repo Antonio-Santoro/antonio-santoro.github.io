@@ -123,4 +123,15 @@ body.light h2 {
   user-select: none;
   z-index: 101;
 }
+/* Link stile moderno */
+.card a {
+  color: #38bdf8; /* colore coerente con il tema, azzurro chiaro */
+  text-decoration: none; /* niente sottolineatura */
+  transition: color 0.3s ease; /* effetto hover */
+}
+
+.card a:hover {
+  color: #7dd3fc; /* colore leggermente più chiaro quando ci passi sopra */
+}
+
 
