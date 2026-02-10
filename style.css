@@ -1,3 +1,4 @@
+/* BODY */
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -24,13 +25,22 @@ header h1 {
   color: #38bdf8;
 }
 
-/* MENU */
+/* TOGGLE + MENU ICON */
+.toggle {
+  cursor: pointer;
+  font-size: 20px;
+  display: inline-block;
+  user-select: none;
+  z-index: 101;
+}
+
 .menu-icon {
   font-size: 28px;
   cursor: pointer;
   display: inline-block;
 }
 
+/* NAV MENU */
 nav {
   position: fixed;
   top: 0;
@@ -59,7 +69,7 @@ nav a:hover {
   background-color: #334155;
 }
 
-/* CONTENT */
+/* CONTAINER + CARD */
 .container {
   max-width: 900px;
   margin: auto;
@@ -115,20 +125,20 @@ body.light h2 {
   color: #2563eb;
 }
 
-/* TOGGLE BUTTON */
-.toggle {
-  cursor: pointer;
-  font-size: 20px;
-  display: inline-block;
-  user-select: none;
-  z-index: 101;
+/* LINKS MODERNI NELLA CARD */
+.card a:link,
+.card a:visited,
+.card a:hover,
+.card a:active {
+  color: #38bdf8; /* azzurro chiaro coerente */
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
-/* Link stile moderno */
-.card a {
-  color: #38bdf8; /* colore coerente con il tema, azzurro chiaro */
-  text-decoration: none; /* niente sottolineatura */
-  transition: color 0.3s ease; /* effetto hover */
+
+.card a:hover {
+  color: #7dd3fc; /* leggermente più chiaro al passaggio del mouse */
 }
+
 
 .card a:hover {
   color: #7dd3fc; /* colore leggermente più chiaro quando ci passi sopra */
