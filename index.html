@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Antonio Santoro | Portfolio</title>
+  <title>Antonio Santoro | Home</title>
 
   <style>
     body {
@@ -11,35 +11,27 @@
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background-color: #0f172a;
       color: #e5e7eb;
-      line-height: 1.6;
     }
 
-    /* HEADER */
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 20px;
-      position: sticky;
-      top: 0;
       background-color: #0f172a;
-      z-index: 100;
     }
 
     header h1 {
       margin: 0;
-      font-size: 1.4rem;
       color: #38bdf8;
+      font-size: 1.4rem;
     }
 
-    /* MENU ICON */
     .menu-icon {
       font-size: 28px;
       cursor: pointer;
-      user-select: none;
     }
 
-    /* MENU */
     nav {
       position: fixed;
       top: 0;
@@ -49,6 +41,10 @@
       background-color: #1e293b;
       padding-top: 80px;
       transition: right 0.3s ease;
+    }
+
+    nav.open {
+      right: 0;
     }
 
     nav a {
@@ -63,37 +59,23 @@
       background-color: #334155;
     }
 
-    nav.open {
-      right: 0;
-    }
-
-    /* CONTENT */
     .container {
       max-width: 900px;
       margin: auto;
-      padding: 40px 20px;
-    }
-
-    section {
-      margin-bottom: 80px;
-    }
-
-    h2 {
-      color: #7dd3fc;
-      margin-bottom: 10px;
+      padding: 80px 20px;
+      text-align: center;
     }
 
     .card {
       background-color: #1e293b;
-      padding: 18px 22px;
-      border-radius: 12px;
-      margin-top: 15px;
+      padding: 30px;
+      border-radius: 14px;
     }
 
     footer {
       text-align: center;
       opacity: 0.6;
-      margin: 60px 0 20px;
+      margin-top: 80px;
       font-size: 0.9em;
     }
   </style>
@@ -107,60 +89,21 @@
 </header>
 
 <nav id="menu">
-  <a href="#home" onclick="toggleMenu()">Home</a>
-  <a href="#elettronica" onclick="toggleMenu()">Elettronica</a>
-  <a href="#stampa3d" onclick="toggleMenu()">Stampa 3D</a>
-  <a href="#bioinformatica" onclick="toggleMenu()">Bioinformatica</a>
+  <a href="elettronica.html">Elettronica</a>
+  <a href="stampa3d.html">Stampa 3D</a>
+  <a href="bioinformatica.html">Bioinformatica</a>
 </nav>
 
 <div class="container">
-
-  <section id="home">
-    <h2>👋 Benvenuto</h2>
-    <div class="card">
-      <p>
-        Sono <strong>Antonio Santoro</strong>, studente di Ingegneria Elettronica
-        all’Università di Messina.
-      </p>
-      <p>
-        Questo sito raccoglie i miei progetti in elettronica,
-        stampa 3D e ambiti interdisciplinari.
-      </p>
-    </div>
-  </section>
-
-  <section id="elettronica">
-    <h2>🔌 Elettronica</h2>
-    <div class="card">
-      <p>
-        Progetti elettronici universitari e personali:
-        circuiti, PCB e analisi di sistemi.
-      </p>
-      <p><em>Competenze:</em> elettronica di base, CAD PCB</p>
-    </div>
-  </section>
-
-  <section id="stampa3d">
-    <h2>🖨️ Stampa 3D</h2>
-    <div class="card">
-      <p>
-        Modellazione e stampa di oggetti funzionali e didattici.
-      </p>
-      <p><em>Strumenti:</em> Fusion 360, PLA, FDM</p>
-    </div>
-  </section>
-
-  <section id="bioinformatica">
-    <h2>🧬 Bioinformatica</h2>
-    <div class="card">
-      <p>
-        Progetti di visualizzazione e ricostruzione di strutture biologiche,
-        come il modello 3D del DNA.
-      </p>
-      <p><em>Focus:</em> modellazione scientifica e divulgazione</p>
-    </div>
-  </section>
-
+  <div class="card">
+    <h2>Studente di Ingegneria Elettronica</h2>
+    <p>
+      Università di Messina
+    </p>
+    <p>
+      Portfolio di progetti in elettronica, stampa 3D e bioinformatica.
+    </p>
+  </div>
 </div>
 
 <footer>
@@ -175,3 +118,4 @@
 
 </body>
 </html>
+
