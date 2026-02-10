@@ -117,5 +117,7 @@ body.light h2 {
   cursor: pointer;
   font-size: 20px;
   margin-left: 15px;
+  display: inline-block;
+  user-select: none; /* evita selezioni strane cliccando */
+  z-index: 101; /* sopra il menu */
 }
-
