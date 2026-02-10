@@ -139,4 +139,12 @@ body.light h2 {
 }
 
 
+.home-link {
+  color: #38bdf8;       /* stesso colore del titolo */
+  text-decoration: none; /* niente sottolineatura */
+}
+
+.home-link:hover {
+  color: #7dd3fc;       /* leggero effetto hover come i link della card */
+}
 
