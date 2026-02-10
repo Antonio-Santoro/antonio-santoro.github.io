@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Antonio Santoro | Portfolio</title>
+
   <style>
     body {
       margin: 0;
@@ -12,92 +13,165 @@
       color: #e5e7eb;
       line-height: 1.6;
     }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      background-color: #0f172a;
+      z-index: 100;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+      color: #38bdf8;
+    }
+
+    /* MENU ICON */
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    /* MENU */
+    nav {
+      position: fixed;
+      top: 0;
+      right: -260px;
+      width: 260px;
+      height: 100%;
+      background-color: #1e293b;
+      padding-top: 80px;
+      transition: right 0.3s ease;
+    }
+
+    nav a {
+      display: block;
+      padding: 15px 25px;
+      color: #e5e7eb;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      background-color: #334155;
+    }
+
+    nav.open {
+      right: 0;
+    }
+
+    /* CONTENT */
     .container {
       max-width: 900px;
       margin: auto;
       padding: 40px 20px;
     }
-    h1 {
-      color: #38bdf8;
-      margin-bottom: 5px;
+
+    section {
+      margin-bottom: 80px;
     }
+
     h2 {
-      margin-top: 40px;
       color: #7dd3fc;
+      margin-bottom: 10px;
     }
-    .subtitle {
-      opacity: 0.85;
-    }
+
     .card {
       background-color: #1e293b;
-      padding: 16px 20px;
+      padding: 18px 22px;
       border-radius: 12px;
       margin-top: 15px;
     }
-    a {
-      color: #38bdf8;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
+
     footer {
-      margin-top: 60px;
       text-align: center;
+      opacity: 0.6;
+      margin: 60px 0 20px;
       font-size: 0.9em;
-      opacity: 0.7;
     }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h1>Antonio Santoro</h1>
-    <p class="subtitle">
-      Studente di Ingegneria Elettronica – Università di Messina
-    </p>
 
+<body>
+
+<header>
+  <h1>Antonio Santoro</h1>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+</header>
+
+<nav id="menu">
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#elettronica" onclick="toggleMenu()">Elettronica</a>
+  <a href="#stampa3d" onclick="toggleMenu()">Stampa 3D</a>
+  <a href="#bioinformatica" onclick="toggleMenu()">Bioinformatica</a>
+</nav>
+
+<div class="container">
+
+  <section id="home">
+    <h2>👋 Benvenuto</h2>
+    <div class="card">
+      <p>
+        Sono <strong>Antonio Santoro</strong>, studente di Ingegneria Elettronica
+        all’Università di Messina.
+      </p>
+      <p>
+        Questo sito raccoglie i miei progetti in elettronica,
+        stampa 3D e ambiti interdisciplinari.
+      </p>
+    </div>
+  </section>
+
+  <section id="elettronica">
     <h2>🔌 Elettronica</h2>
     <div class="card">
-      <strong>Progetti elettronici</strong>
       <p>
-        Kauai OO Board
+        Progetti elettronici universitari e personali:
+        circuiti, PCB e analisi di sistemi.
       </p>
-      <p><em>Strumenti:</em> Kicad</p>
+      <p><em>Competenze:</em> elettronica di base, CAD PCB</p>
     </div>
+  </section>
 
-    <h2>🖨️ Stampa 3D & CAD</h2>
+  <section id="stampa3d">
+    <h2>🖨️ Stampa 3D</h2>
     <div class="card">
-      <strong>Prototipi e oggetti funzionali</strong>
       <p>
-        https://newelectronicsstore.etsy.com
+        Modellazione e stampa di oggetti funzionali e didattici.
       </p>
-      <p><em>Strumenti:</em> Fusion 360</p>
-       <p><em>Stampante 3D:</em> Ender 3 V2 neo</p>
+      <p><em>Strumenti:</em> Fusion 360, PLA, FDM</p>
     </div>
+  </section>
 
-    <h2>🧬 Progetti interdisciplinari</h2>
+  <section id="bioinformatica">
+    <h2>🧬 Bioinformatica</h2>
     <div class="card">
-      <strong>Modello 3D DNA</strong>
       <p>
-        Ricostruzione della doppia elica del DNA a scopo didattico e
-        visualizzazione scientifica.
+        Progetti di visualizzazione e ricostruzione di strutture biologiche,
+        come il modello 3D del DNA.
       </p>
-      <p><em>Competenze:</em> modellazione parametrica, visualizzazione tecnica</p>
+      <p><em>Focus:</em> modellazione scientifica e divulgazione</p>
     </div>
+  </section>
 
-    <h2>📬 Contatti</h2>
-    <div class="card">
-      <p>Email: <a href="mailto:antos3104@gmail.com">antos3104@gmail.com</a></p>
-      <p>GitHub: 
-        <a href="https://github.com/Antonio-Santoro" target="_blank">
-          github.com/Antonio-Santoro
-        </a>
-      </p>
-    </div>
+</div>
 
-    <footer>
-      © 2026 · Portfolio personale
-    </footer>
-  </div>
+<footer>
+  © 2026 · Antonio Santoro
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("menu").classList.toggle("open");
+  }
+</script>
+
 </body>
 </html>
