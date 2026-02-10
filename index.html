@@ -2,90 +2,253 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <title>Antonio Santoro</title>
+
+  <!-- FONDAMENTALE PER MOBILE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Antonio Santoro | Home</title>
-  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* BODY */
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background-color: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      background-color: #0f172a;
+      z-index: 100;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.4rem;
+    }
+
+    /* LINK HOME (TITOLO) */
+    .home-link {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .home-link:hover {
+      color: #7dd3fc;
+    }
+
+    /* TOGGLE + MENU */
+    .right-controls {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .toggle {
+      cursor: pointer;
+      font-size: 20px;
+      user-select: none;
+    }
+
+    .menu-icon {
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    /* NAV MENU */
+    nav {
+      position: fixed;
+      top: 0;
+      right: -260px;
+      width: 260px;
+      height: 100%;
+      background-color: #1e293b;
+      padding-top: 80px;
+      transition: right 0.3s ease;
+      z-index: 200;
+    }
+
+    nav.open {
+      right: 0;
+    }
+
+    nav a {
+      display: block;
+      padding: 15px 25px;
+      color: #e5e7eb;
+      text-decoration: none;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      background-color: #334155;
+    }
+
+    /* X DI CHIUSURA */
+    .close-menu {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* OVERLAY (CLICK FUORI) */
+    .overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      z-index: 150;
+    }
+
+    .overlay.show {
+      display: block;
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      color: #7dd3fc;
+    }
+
+    .card {
+      background-color: #1e293b;
+      padding: 20px 24px;
+      border-radius: 14px;
+      margin-top: 20px;
+    }
+
+    /* LINKS NELLA CARD */
+    .card a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
+
+    .card a:hover {
+      color: #7dd3fc;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      opacity: 0.6;
+      margin: 80px 0 20px;
+      font-size: 0.9em;
+    }
+
+    /* LIGHT MODE */
+    body.light {
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+
+    body.light header {
+      background-color: #f8fafc;
+    }
+
+    body.light nav {
+      background-color: #e2e8f0;
+    }
+
+    body.light nav a {
+      color: #0f172a;
+    }
+
+    body.light nav a:hover {
+      background-color: #cbd5f5;
+    }
+
+    body.light .card {
+      background-color: #e2e8f0;
+    }
+
+    body.light h2 {
+      color: #2563eb;
+    }
+
+    body.light .close-menu {
+      color: #0f172a;
+    }
+  </style>
 </head>
 
 <body>
-  
-<header>
-  <h1><a href="index.html" class="home-link">Antonio Santoro</a></h1>
-  <div style="display: flex; align-items: center; gap: 15px;">
-    <span class="toggle" onclick="toggleTheme()">🌙</span>
-    <span class="menu-icon" onclick="toggleMenu()">☰</span>
+
+  <!-- HEADER -->
+  <header>
+    <h1>
+      <a href="index.html" class="home-link">Antonio Santoro</a>
+    </h1>
+
+    <div class="right-controls">
+      <span class="toggle" onclick="toggleTheme()">🌙</span>
+      <span class="menu-icon" onclick="openMenu()">☰</span>
+    </div>
+  </header>
+
+  <!-- OVERLAY -->
+  <div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+  <!-- MENU -->
+  <nav id="menu">
+    <span class="close-menu" onclick="closeMenu()">✖</span>
+    <a href="index.html">Home</a>
+    <a href="elettronica.html">Elettronica</a>
+    <a href="stampa3d.html">Stampa 3D</a>
+    <a href="bioinformatica.html">Bioinformatica</a>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <h2>Chi sono?</h2>
+    <div class="card">
+      <p>
+        Studente di ingegneria elettronica, appassionato di tecnologia,
+        stampa 3D e sperimentazione.  
+        Questo sito raccoglie i miei progetti e interessi.
+      </p>
+
+      <p>
+        📍 Messina<br>
+        📧 <a href="mailto:antonio@example.com">antonio@example.com</a><br>
+        ▶️ <a href="https://www.youtube.com/@Santoro_Antonio/videos" target="_blank">YouTube</a>
+      </p>
+    </div>
   </div>
-</header>
 
+  <footer>
+    © 2026 – Antonio Santoro
+  </footer>
 
-<nav id="menu">
-  <a href="index.html">Home</a>
-  <a href="elettronica.html">Elettronica</a>
-  <a href="stampa3d.html">Stampa 3D</a>
-  <a href="bioinformatica.html">Bioinformatica</a>
-</nav>
+  <!-- SCRIPT -->
+  <script>
+    function toggleTheme() {
+      document.body.classList.toggle("light");
+    }
 
-<div class="container">
-  <div class="card">
-   
+    function openMenu() {
+      document.getElementById("menu").classList.add("open");
+      document.getElementById("overlay").classList.add("show");
+    }
 
-   <h2>Chi sono?</h2>
-
-<p>
-Ciao! Sono Antonio Santoro, studente di Ingegneria Elettronica all'Università di Messina.
-Sono appassionato di elettronica, stampa 3D e progetti interdisciplinari che uniscono tecnologia e scienza.
-  </p>
-
-<p>
-Mi piace trasformare idee complesse in prototipi concreti, esplorando sempre nuove sfide e apprendendo dai miei esperimenti.
-  <p>
-    
-<p>    
-Sul mio sito puoi scoprire i miei progetti universitari, i lavori di stampa 3D e alcune curiosità di bioinformatica.
-  </p>
-
-
-    <hr style="opacity:0.2">
-<p>
-  📍 <strong>Messina</strong> – 98121 
-  <br>
-  📧 <a href="mailto:antos3104@gmail.com">antos3104@gmail.com</a>
-  <br>
-  💻 <a href="https://github.com/Antonio-Santoro" target="_blank">
-    github.com/Antonio-Santoro
-  </a>
-  <br>
-  ▶️ <a href="https://youtube.com/@santoro_antonio?si=60F-oiFt_8Zv-057" target="_blank">
-    YouTube
-  </a>
-</p>
-
-  </div>
-</div>
-
-
-<footer>
-  © 2026 · Antonio Santoro
-</footer>
-
-<script>
-  function toggleMenu() {
-    document.getElementById("menu").classList.toggle("open");
-  }
-
-  function toggleTheme() {
-    document.body.classList.toggle("light");
-    localStorage.setItem(
-      "theme",
-      document.body.classList.contains("light") ? "light" : "dark"
-    );
-  }
-
-  // Load theme on page load
-  if (localStorage.getItem("theme") === "light") {
-    document.body.classList.add("light");
-  }
-</script>
+    function closeMenu() {
+      document.getElementById("menu").classList.remove("open");
+      document.getElementById("overlay").classList.remove("show");
+    }
+  </script>
 
 </body>
 </html>
