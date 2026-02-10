@@ -138,13 +138,20 @@ body.light h2 {
   text-decoration: none;
 }
 
-
-.home-link {
-  color: #38bdf8;       /* stesso colore del titolo */
-  text-decoration: none; /* niente sottolineatura */
+/* Link del titolo "Antonio Santoro" */
+header h1 a.home-link {
+  color: #38bdf8 !important;       /* forza colore azzurro chiaro */
+  text-decoration: none !important; /* rimuove sottolineatura */
 }
 
-.home-link:hover {
-  color: #7dd3fc;       /* leggero effetto hover come i link della card */
+header h1 a.home-link:hover {
+  color: #7dd3fc !important;       /* leggero effetto hover */
+}
+
+/* Header div interno per separare toggle e menu */
+header > div {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* distanza tra 🌙 e ☰ */
 }
 
