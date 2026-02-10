@@ -10,7 +10,10 @@
 
 <header>
   <h1>Antonio Santoro</h1>
-  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+ <div>
+  <span class="toggle" onclick="toggleTheme()">🌙</span>
+  <span class="menu-icon" onclick="toggleMenu()">☰</span>
+</div>
 </header>
 
 <nav id="menu">
@@ -36,7 +39,21 @@
   function toggleMenu() {
     document.getElementById("menu").classList.toggle("open");
   }
+
+  function toggleTheme() {
+    document.body.classList.toggle("light");
+    localStorage.setItem(
+      "theme",
+      document.body.classList.contains("light") ? "light" : "dark"
+    );
+  }
+
+  // Load theme on page load
+  if (localStorage.getItem("theme") === "light") {
+    document.body.classList.add("light");
+  }
 </script>
+
 
 </body>
 </html>
