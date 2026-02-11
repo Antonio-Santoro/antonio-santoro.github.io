@@ -11,17 +11,20 @@
 <body>
 
 <header>
-  <h1><a href="index.html" class="home-link">Antonio Santoro</a></h1>
-  <div style="display: flex; align-items: center; gap: 15px;">
+  <h1>
+    <a href="index.html" class="home-link">Antonio Santoro</a>
+  </h1>
+
+  <div class="right-controls">
     <span class="toggle" onclick="toggleTheme()">🌙</span>
-    <span class="menu-icon" onclick="toggleMenu()">☰</span>
+    <span class="menu-icon" onclick="openMenu()">☰</span>
   </div>
 </header>
 
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
 
 <nav id="menu">
-  <div class="close-btn" onclick="closeMenu()">✕</div>
-
+  <span class="close-menu" onclick="closeMenu()">✖</span>
   <a href="index.html">Home</a>
   <a href="elettronica.html">Elettronica</a>
   <a href="stampa3d.html">Stampa 3D</a>
@@ -37,26 +40,25 @@
 </div>
 
 <footer>
-  © 2026 · Antonio Santoro
+  © 2026 – Antonio Santoro
 </footer>
 
- <script>
-    function toggleTheme() {
-      document.body.classList.toggle("light");
-    }
+<script>
+  function toggleTheme() {
+    document.body.classList.toggle("light");
+  }
 
-    function openMenu() {
-      document.getElementById("menu").classList.add("open");
-      document.getElementById("overlay").classList.add("show");
-    }
+  function openMenu() {
+    document.getElementById("menu").classList.add("open");
+    document.getElementById("overlay").classList.add("show");
+  }
 
-    function closeMenu() {
-      document.getElementById("menu").classList.remove("open");
-      document.getElementById("overlay").classList.remove("show");
-    }
-  </script>
-
-
+  function closeMenu() {
+    document.getElementById("menu").classList.remove("open");
+    document.getElementById("overlay").classList.remove("show");
+  }
+</script>
 
 </body>
+
 </html>
