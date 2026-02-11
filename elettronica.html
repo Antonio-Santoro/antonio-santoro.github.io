@@ -40,40 +40,21 @@
   © 2026 · Antonio Santoro
 </footer>
 
-<script>
-  const menu = document.getElementById("menu");
-
-  function toggleMenu() {
-    menu.classList.toggle("open");
-  }
-
-  function closeMenu() {
-    menu.classList.remove("open");
-  }
-
-  function toggleTheme() {
-    document.body.classList.toggle("light");
-    localStorage.setItem(
-      "theme",
-      document.body.classList.contains("light") ? "light" : "dark"
-    );
-  }
-
-  // Chiudi menu cliccando fuori
-  document.addEventListener("click", function (event) {
-    const isClickInsideMenu = menu.contains(event.target);
-    const isMenuIcon = event.target.classList.contains("menu-icon");
-
-    if (!isClickInsideMenu && !isMenuIcon) {
-      closeMenu();
+ <script>
+    function toggleTheme() {
+      document.body.classList.toggle("light");
     }
-  });
 
-  // Load theme on page load
-  if (localStorage.getItem("theme") === "light") {
-    document.body.classList.add("light");
-  }
-</script>
+    function openMenu() {
+      document.getElementById("menu").classList.add("open");
+      document.getElementById("overlay").classList.add("show");
+    }
+
+    function closeMenu() {
+      document.getElementById("menu").classList.remove("open");
+      document.getElementById("overlay").classList.remove("show");
+    }
+  </script>
 
 
 
