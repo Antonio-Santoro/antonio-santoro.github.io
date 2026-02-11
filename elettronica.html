@@ -24,6 +24,14 @@
   <a href="stampa3d.html">Stampa 3D</a>
   <a href="bioinformatica.html">Bioinformatica</a>
 </nav>
+<nav id="menu">
+  <div class="close-btn" onclick="closeMenu()">✕</div>
+
+  <a href="index.html">Home</a>
+  <a href="elettronica.html">Elettronica</a>
+  <a href="stampa3d.html">Stampa 3D</a>
+  <a href="bioinformatica.html">Bioinformatica</a>
+</nav>
 
 <div class="container">
   <h2>🔌 Elettronica</h2>
@@ -38,8 +46,14 @@
 </footer>
 
 <script>
+  const menu = document.getElementById("menu");
+
   function toggleMenu() {
-    document.getElementById("menu").classList.toggle("open");
+    menu.classList.toggle("open");
+  }
+
+  function closeMenu() {
+    menu.classList.remove("open");
   }
 
   function toggleTheme() {
@@ -50,11 +64,22 @@
     );
   }
 
+  // Chiudi menu cliccando fuori
+  document.addEventListener("click", function (event) {
+    const isClickInsideMenu = menu.contains(event.target);
+    const isMenuIcon = event.target.classList.contains("menu-icon");
+
+    if (!isClickInsideMenu && !isMenuIcon) {
+      closeMenu();
+    }
+  });
+
   // Load theme on page load
   if (localStorage.getItem("theme") === "light") {
     document.body.classList.add("light");
   }
 </script>
+
 
 
 </body>
